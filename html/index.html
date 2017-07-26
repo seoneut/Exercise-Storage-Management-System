@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>演练仓储系统</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/tether.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <style>
+        .navbar {
+
+            background-color: #2e6da4;
+        }
+        .navbar-default .navbar-brand {
+            color: #ffffff;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #ffffff;
+        }
+        .main-container {
+             background-color: #fff;
+             margin-bottom: 30px;
+             margin-top: 30px;
+             padding: 30px 65px 60px 65px;
+             border-radius: 4px;
+             /* webkit-box-shadow: 0 0 4px rgba(0,0,0,.25), inset 0 0 0 rgba(0,0,0,.1); */
+             box-shadow: 0 0 4px rgba(0,0,0,.25), inset 0 0 0 rgba(0,0,0,.1);
+         }
+        .noborder-container {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            padding: 30px 30px 60px 30px;
+            /* border-radius: 4px; */
+            /* webkit-box-shadow: 0 0 4px rgba(0,0,0,.25), inset 0 0 0 rgba(0,0,0,.1); */
+            /* box-shadow: 0 0 4px rgba(0,0,0,.25), inset 0 0 0 rgba(0,0,0,.1); */
+        }
+        .footer-col {
+            border-right: 1px solid #bdbdbd;
+            text-align: left;
+            min-height: 125px;
+        }
+        .footer-col-right {
+            /* border-right: 1px solid #bdbdbd; */
+            text-align: left;
+            min-height: 125px;
+        }
+        .outer-row {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">演练仓储系统</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">仓库管理</a></li>
+                <li><a href="#">运输管理</a></li>
+                <li><a href="#">业务管理</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的任务
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">进行中的运输</a></li>
+                        <li><a href="#">待确认进出库</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form" method="get" action="">
+                <div class="form-group" style="margin-left: 20px">
+                    <input type="text" class="form-control" placeholder="输入搜索内容">
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container main-container">
+    <div class="row">
+        <p class="lead">
+            欢迎您使用演练仓储系统！
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-responsive" src="img/storage.png" width="70" height="70">
+            <h3>仓库管理</h3>
+            <p>
+                仓库管理功能主要用于管理仓库内的货物。您可以通过该功能查询货物信息、新建入出库任务、修改库存数据以及
+                移除特定货物。需要注意的是，本功能的部分子功能可能需要业务经理权限。
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-responsive" src="img/transport.png" width="70" height="70">
+            <h3>运输管理</h3>
+            <p>
+                运输管理功能主要用于管理运输途中的货物。您可以通过该功能追踪货物位置、联系运输负责人以及召回货物。
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-responsive" src="img/business.png" width="70" height="70">
+            <h3>业务管理</h3>
+            <p>
+                业务管理功能主要用于统计运输信息、生成统计数据报表以及对员工账户进行管理。使用该功能需要业务经理权限。
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <!--按钮单独另起一行-->
+        <div class="col-md-4">
+            <a class="btn btn-primary" href="#">前往仓库管理</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-primary" href="#">前往运输管理</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-primary" href="#">前往业务管理</a>
+        </div>
+    </div>
+</div>
+<div class="container noborder-container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>您是新来的员工？</h2>
+            <p class="lead">
+                如果您还没有一个演练仓储系统的账户，您可以现在注册一个！
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a class="btn btn-default" href="#">点击我注册一个账户</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <small>*需要管理员开启自助注册功能</small>
+        </div>
+    </div>
+    <div class="row outer-row">
+        <div class="col-md-12">
+            <h2>还不了解系统的使用方法？</h2>
+            <p class="lead">
+                没关系，我们为您准备了周全的教程！
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>下载使用手册</h4>
+            <p>
+                使用手册包含了全部操作说明，比拥有图文并茂的例子演示常见任务的操作流程。
+            </p>
+            <a href="#">点击下载</a>
+        </div>
+        <div class="col-md-4">
+            <h4>观看教学视频</h4>
+            <p>
+                我们的资深培训专员已经上传了一套完整的操作流程教学视频。跟着视频一起动手
+                是一种非常高效的掌握系统使用的方法。
+            </p>
+            <a href="#">前往观看</a>
+        </div>
+        <div class="col-md-4">
+            <h4>用户交流论坛</h4>
+            <p>
+                用户交流论坛里聚集了非常多有经验的使用者。跟他们多多交流并请教他们的意见，
+                可以使您能够快速解决常见问题，少走弯路。
+            </p>
+            <a href="#">加入讨论</a>
+        </div>
+    </div>
+</div>
+<footer class="modal-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 footer-col">
+                <h4>有关演练仓储系统的更多信息</h4>
+                <a href="#">了解更多</a>
+            </div>
+            <div class="col-md-3 footer-col">
+                <h4>获取技术支持</h4>
+                <small>
+                    联系电话：xxx-xxxxxxxx<br>
+                    电子邮箱：xxxxxxx@xxx.xxx<br>
+                    本小组提供24x7技术专员值班服务
+                </small>
+            </div>
+            <div class="col-md-3 footer-col">
+                <h4>加入我们</h4>
+                <small>我们欢迎更多志同道合的小伙伴们加入<br></small>
+                <a href="#">投放简历</a>
+            </div>
+            <div class="col-md-3 footer-col-right">
+                <p>
+                    Copyright © 2015-2017 150805学习小组<br>
+                    版权所有 侵权必究
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
